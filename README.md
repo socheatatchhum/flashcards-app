@@ -3,7 +3,7 @@ Reflection:
 >generate the codes, especially the ui components with all the html tags such as div, sections, nav hierarchies. 
 
 - At least one AI bug you identified and how you fixed it.
-	Ø First bug: 
+> First bug: 
 let activeDeckId = savedState ? savedState.activeDeckId : decks[0].id;
  To: 
 let activeDeckId = savedState
@@ -11,7 +11,7 @@ let activeDeckId = savedState
   : decks[0]?.id ?? null;
 if there is no cards saved or in local storage, I would get typeError for the decks[0].id because the old code would depend on savedState with existing at least one deck card saved.
 
-	Ø Second bug: 
+> Second bug: 
 	button.setAttribute("aria-current", deck.id === activeDeckId ? "page" : "false");
 	 
 	To 
